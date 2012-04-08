@@ -1,3 +1,11 @@
+2012-4-8
+    * bugfix tns quantize at QuantizeReflectionCoeffs.
+        - TNSの量子化時に負の値の丸め処理のバグを修正
+    * use +60 value for scalefactor.
+        - +60の値を符号化せずに59にクリップしていたバグを修正
+    * bugfix add clipped diff instead of original value
+        - クリッピングされた変化量を加算することで、以降の値のずれを修正。但し、クリッピングされるような値はもともと処理されない可能性が高い。
+
 2009-02-02 - Version 1.28
 	* Prevent out of range scalefactors
 	* Updated to latest mpeg4ip mp4 file format library
